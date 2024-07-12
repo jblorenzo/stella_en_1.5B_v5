@@ -8965,6 +8965,10 @@ model-index:
       type: PairClassification
 tags:
 - mteb
+- sentence-transformers
+- transformers
+- sentence-similarity
+license: apache-2.0
 ---
 
 
