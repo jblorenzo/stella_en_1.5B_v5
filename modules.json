@@ -14,7 +14,7 @@
  {
   "idx": 2,
   "name": "2",
-  "path": "2_Dense",
+  "path": "2_Dense_1024",
   "type": "sentence_transformers.models.Dense"
  }
 ]
