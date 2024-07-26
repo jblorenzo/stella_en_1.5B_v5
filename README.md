@@ -5480,7 +5480,7 @@ from sentence_transformers import SentenceTransformer
 
 # This model supports two prompts: "s2p_query" and "s2s_query" for sentence-to-passage and sentence-to-sentence tasks, respectively.
 # They are defined in `config_sentence_transformers.json`
-prompt_name = "s2p_query"
+query_prompt_name = "s2p_query"
 queries = [
     "What are some ways to reduce stress?",
     "What are the benefits of drinking green tea?",
@@ -5492,7 +5492,7 @@ docs = [
 ]
 
 # ！The default dimension is 1024, if you need other dimensions, please clone the model and modify `modules.json` to replace `2_Dense_1024` with another dimension, e.g. `2_Dense_256` or `2_Dense_8192` !
-model = SentenceTransformer("infgrad/stella_en_1.5B_v5", trust_remote_code=True).cuda()
+model = SentenceTransformer("dunzhang/stella_en_1.5B_v5", trust_remote_code=True).cuda()
 query_embeddings = model.encode(queries, prompt_name=query_prompt_name)
 doc_embeddings = model.encode(docs)
 print(query_embeddings.shape, doc_embeddings.shape)
